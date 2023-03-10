@@ -1,0 +1,14 @@
+@model Producto
+
+<h1>Detalle del producto</h1>
+
+<dl class="row">
+    <dt class="col-sm-2">Nombre</dt>
+    <dt class="col-sm-10">@Model.Nombre</dt>
+
+    <dt class="col-sm-2">Precio</dt>
+    <dt class="col-sm-10">@Model.Precio.ToString("C")</dt>
+</dl>
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Regresar a la lista de productos</a>
+</p>

@@ -1,0 +1,18 @@
+@model Producto
+
+<h1>Eliminar producto</h1>
+<h3>¿Estás seguro que deseas eliminar el siguiente producto?</h3>
+<dl class="row">
+    <dt class="col-sm-2">Nombre</dt>
+    <dt class="col-sm-10">@Model.Nombre</dt>
+
+    <dt class="col-sm-2">Precio</dt>
+    <dt class="col-sm-10">@Model.Precio.ToString("C")</dt>
+</dl>
+<form asp-action="EliminarConfirmado" method="post">
+    <input asp-for="Id" type="hidden" />
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
